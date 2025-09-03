@@ -1,0 +1,127 @@
+/* General Reset */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body {
+  background-color: #fdf6e3; /* creme background */
+  color: #333;
+}
+
+.container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1c1b22;
+  color: #eee;
+}
+
+body.dark .container {
+  background: #3b2a4d;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Input + Button */
+input {
+  padding: 10px;
+  width: 65%;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  margin-right: 8px;
+  background: #f3f3f3;
+  transition: background 0.3s;
+}
+
+body.dark input {
+  background: #5c4b6f;
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #a576ad6f;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #9a71ab;
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+body.dark li {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+  text-align: left;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Theme Toggle */
+#themeToggle {
+  margin-top: 20px;
+  background: #ff9800;
+}
+
+#themeToggle:hover {
+  background: #e68900;
+}
+
+body.dark #themeToggle {
+  background: #b388ff;
+}
+
+body.dark #themeToggle:hover {
+  background: #9c6dff;
+}
